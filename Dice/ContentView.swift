@@ -10,12 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Image(systemName: "die.face.1")
+                .resizable()
+                .scaledToFit()
+                .frame(width: UIScreen.main.bounds.width/2)
+                .padding()
+            Button(action: {
+                print("ボタンが押されたよ")
+            }){
+              Text("サイコロを振る")
+            }
         }
-        .padding()
     }
 }
 
